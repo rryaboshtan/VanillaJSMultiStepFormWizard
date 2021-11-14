@@ -37,8 +37,8 @@ body {
 }
 
 .step__header {
-  text-align: center;
   margin-top: auto;
+  margin-left: -0.6rem;
 }
 
 .step:first-child {
@@ -73,6 +73,7 @@ body {
 .active .point {
   border: 1px solid #92a4c5;
   -webkit-transition: border 0.7s ease 4s;
+  -o-transition: border 0.7s ease 4s;
   transition: border 0.7s ease 4s;
 }
 
