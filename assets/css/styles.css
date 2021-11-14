@@ -1,0 +1,218 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f0f5;
+  font-size: 1.2rem;
+}
+
+.steps__container {
+  margin-top: 4rem;
+}
+
+.steps__container .steps,
+.steps__container .step__point {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.step {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: auto;
+  position: relative;
+}
+
+.step__header {
+  text-align: center;
+  margin-top: auto;
+}
+
+.step:first-child {
+  margin-left: 23%;
+}
+
+.step:last-child .post-line {
+  display: none;
+}
+
+.step .point {
+  min-width: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #e0e0e0;
+  background-color: #e0e0e0;
+}
+
+.step .post-line {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 2rem;
+  background-color: #e0e0e0;
+}
+
+.step .post-line__filler {
+  height: 1px;
+}
+
+.active .point {
+  border: 1px solid #92a4c5;
+  -webkit-transition: border 0.7s ease 4s;
+  transition: border 0.7s ease 4s;
+}
+
+.done .point {
+  background-color: #92a4c5;
+  border: 1px solid #92a4c5;
+  -webkit-animation-name: pointFill;
+          animation-name: pointFill;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.done .post-line__filler {
+  background-color: #92a4c5;
+  -webkit-animation-name: lineFill;
+          animation-name: lineFill;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.steps__form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.steps__form .form {
+  display: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 1.5rem;
+  width: 400px;
+  min-height: 350px;
+  padding: 3rem;
+  background-color: #92a4c5;
+  border-radius: 0.3rem;
+}
+
+.steps__form .form.active {
+  display: block;
+}
+
+.steps__form .form input {
+  width: 300px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 0.4rem;
+  margin-left: 0;
+  border-radius: 0.3rem;
+}
+
+.steps__form .form label {
+  display: block;
+  min-width: 16rem;
+}
+
+.steps__form button {
+  height: 34px;
+  padding: 0 20px;
+  margin: 0.5rem 2rem;
+  font-size: 1rem;
+  background-color: #92a4c5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.3rem;
+  width: 8rem;
+  position: absolute;
+  bottom: -3.3rem;
+}
+
+.steps__form button span {
+  font-size: 1.4rem;
+}
+
+.error-msg {
+  margin: 0.5rem 2rem;
+  color: red;
+  display: none;
+  position: absolute;
+  bottom: 0.7rem;
+  font-size: 1.2rem;
+}
+
+@-webkit-keyframes lineFill {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes lineFill {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes pointFill {
+  0% {
+    background-color: #e0e0e0;
+    border-color: #92a4c5;
+  }
+  100% {
+    background-color: #92a4c5;
+  }
+}
+
+@keyframes pointFill {
+  0% {
+    background-color: #e0e0e0;
+    border-color: #92a4c5;
+  }
+  100% {
+    background-color: #92a4c5;
+  }
+}

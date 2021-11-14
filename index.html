@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input autocomplete</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="steps__container">
+        <div class="steps">
+        </div>
+
+        <div class="steps__form">
+            <div class="form" data-form-id='1'>
+                <h2>Form 1</h2>
+                <form name="userNameForm">
+
+                    <label for="userName">Your name: </label>
+                    <input type="text" id="userName" required>
+
+                    <label for="userEmail">Your email: </label>
+                    <input type="text" id="userEmail" required>
+
+                </form>
+            </div>
+            <div class="form" data-form-id='2'>
+                <h2>Form 2</h2>
+                <form name="userSocials">
+                    <label for="facebook">Facebook: </label>
+                    <input type="text" id="facebook" required>
+
+                    <label for="instagram">Instagram: </label>
+                    <input type="text" id="instagram" name="instagram" required>
+
+                    <label for="linkedin">Linkedin: </label>
+                    <input type="text" id="linkedin" name="linkedin" required>
+
+                </form>
+            </div>
+            <div class="form" data-form-id='3'>
+                <h2>Form 3</h2>
+                <form name="userAdditionalInfo">
+                    <label for="firstName">Your first name: </label>
+                    <input type="text" id="firstName" required>
+
+                    <label for="lastName">Your last name: </label>
+                    <input type="text" id="lastName" required>
+
+                    <label for="address">Your address: </label>
+                    <input type="text" id="address" required>
+                </form>
+
+            </div>
+            <div class="error-msg">Input all data please</div>
+
+            <button class="next-btn">Next step <span> &#187;</span></button>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
